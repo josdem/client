@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="client" default="all">
+	<property name="os" value="windows" />
+	<property environment="env" />
+	<property name="haltoOnFailure" value="true" />
+	<!--
+	// Uncomment this property to run tests on audio player and music player components
+	<property name="hudson.run" value="whatever" />
+	-->
+
+	<property name="build.dir" value="build" />
+	<property name="dist.dir" value="dist" />
+	<property name="lib.dir" value="lib" />
+	<property name="jars.dir" value="${lib.dir}/jars" />
+	<property name="resources.dir" value="${lib.dir}/resources" />
+	<property name="test.src.dir" value="test/src" />
+	<property name="test.fest.dir" value="test/fest" />
+	<property name="test.lib.dir" value="test/lib" />
+	<property name="test.reports.dir" value="test/reports" />
+	<property name="test.build.dir" value="test/build" />
+	<property name="checkstyle.log.dir" value="logs/checkstyle" />
+	<property name="instr.dir" value="${test.build.dir}/emmainstr" />
+
+	<property name="jar.name" value="client.jar" />
+	<property name="dist.file" value="AllClient_${env.JOB_NAME}.build-${env.BUILD_NUMBER}.zip" />
+
+	<property name="slash" value="${file.separator}" />
+
+	<property name="coverage.enabled" value="true" />
+	<property name="coverage.lib" value="coverage/lib" />
+	<property name="coverage.instr" value="coverage/instr" />
+	<property name="coverage.workdir" value="coverage/workdir" />
+	<property name="coverage.report" value="coverage/reports" />
+
+	<path id="emma.lib">
+		<pathelement location="${coverage.lib}/emma.jar" />
+		<pathelement location="${coverage.lib}/emma_ant.jar" />
+		<pathelement location="${coverage.lib}/jdom.jar" />
+		<pathelement location="${coverage.lib}/emmaFail_ant.jar" />
+	</path>
+
+	<taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+
+	<taskdef resource="emmaFail_ant.properties" classpathref="emma.lib" />
+
+	<path id="test.classpath.jars">
+		<fileset dir="${test.lib.dir}" includes="**/*.jar" />
+	</path>
+
+	<path id="classpath.media.required">
+		<pathelement location="${jars.dir}/jffmpeg-1.1.0.jar" />
+		<pathelement location="${jars.dir}/jmf.jar" />
+		<pathelement location="${jars.dir}/mediaplayer.jar" />
+		<pathelement location="${jars.dir}/multiplayer.jar" />
+		<pathelement location="${jars.dir}/fobs4jmf.jar" />
+	</path>
+
+	<target name="all" depends="clean,init,compile,db.delete.files,coverage.instrumentation,test,test.failed,dist,coverage.report" />
+
+	<target name="all-hudson" depends="hudson-prepare,clean,init,compile,db.delete.files,coverage.instrumentation,test,test.failed,dist,coverage.report" />
+
+	<target name="clean">
+		<delete dir="${build.dir}" failonerror="false" />
+		<delete dir="${test.build.dir}" failonerror="false" />
+		<delete dir="${test.reports.dir}" failonerror="false" />
+		<delete dir="${checkstyle.log.dir}" failonerror="false" />
+		<delete dir="${dist.dir}" failonerror="false" />
+		<delete dir="${coverage.report}" failonerror="false" />
+	</target>
+
+	<target name="hudson-prepare">
+		<property name="hudson.run" value="whatever" />
+	</target>
+
+	<target name="init">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${test.build.dir}" />
+		<mkdir dir="${test.reports.dir}" />
+		<mkdir dir="${checkstyle.log.dir}" />
+		<mkdir dir="${dist.dir}/lib" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="${build.dir}" debug="on" nowarn="on">
+			<classpath>
+				<fileset dir="${jars.dir}/${os}" />
+				<fileset dir="${jars.dir}" />
+			</classpath>
+		</javac>
+		<copy todir="${build.dir}">
+			<fileset dir="src" includes="**/*.xml,**/*.properties" />
+		</copy>
+	</target>
+
+	<target name="test" depends="compile-tests">
+		<!-- if you have problems running this, you might need to add junit.jar to ANT_HOME/lib -->
+		<junit printsummary="withOutAndErr" dir="." fork="true" forkMode="once" haltonfailure="${haltoOnFailure}" failureproperty="tests.failed">
+			<classpath>
+				<fileset dir="${jars.dir}/${os}" />
+				<fileset dir="${jars.dir}">
+					<include name="*.jar" />
+				</fileset>
+				<path refid="test.classpath.jars" />
+				<path refid="emma.lib" />
+				<!-- add pathElement coverage.instr in order to do coverage reports-->
+				<pathelement location="${coverage.instr}" />
+				<pathelement location="${build.dir}" />
+				<pathelement location="${test.build.dir}" />
+			</classpath>
+			<formatter type="brief" usefile="false" />
+			<formatter type="xml" />
+			<batchtest todir="${test.reports.dir}">
+				<fileset dir="${test.src.dir}">
+					<include name="**/Test*.java" />
+					<exclude name="**/TestAudioPlayer*.java" unless="hudson.run" />
+					<exclude name="**/Test*Metadata.java" unless="hudson.run" />
+					<exclude name="**/TestMediaInfoWMA.java" unless="hudson.run" />
+					<exclude name="**/TestFakeMP3.java" unless="hudson.run" />
+				</fileset>
+				<fileset dir="${test.fest.dir}">
+					<include name="**/*.java" if="hudson.run" />
+					<exclude name="**/Base*.java" />
+				</fileset>
+			</batchtest>
+			<jvmarg value="-Xms256m" />
+			<jvmarg value="-Xmx384m" />
+			<sysproperty key="java.library.path" path="${basedir}${slash}${jars.dir}${slash}${os}" />
+			<jvmarg value="-XX:+UseParallelGC" />
+			<jvmarg value="-Demma.coverage.out.file=${coverage.workdir}/coverage.ec" />
+			<jvmarg value="-Demma.coverage.out.merge=true" />
+		</junit>
+	</target>
+
+	<target name="compile-tests" depends="compile">
+		<javac srcdir="${test.src.dir}" destdir="${test.build.dir}" nowarn="on">
+			<classpath>
+				<fileset dir="${jars.dir}/${os}" />
+				<fileset dir="${jars.dir}" />
+				<pathelement location="${build.dir}" />
+				<path refid="test.classpath.jars" />
+			</classpath>
+		</javac>
+		<javac srcdir="${test.fest.dir}" destdir="${test.build.dir}" nowarn="on">
+			<classpath>
+				<fileset dir="${jars.dir}/${os}" />
+				<fileset dir="${jars.dir}" />
+				<pathelement location="${build.dir}" />
+				<path refid="test.classpath.jars" />
+			</classpath>
+		</javac>
+		<copy todir="${test.build.dir}">
+			<fileset dir="${test.src.dir}" includes="**/*.xml,**/*.properties" />
+		</copy>
+	</target>
+
+	<target name="jar" depends="compile,compile-tests">
+		<jar jarfile="${dist.dir}/lib/${jar.name}" manifest="src/META-INF/MANIFEST.MF">
+			<fileset dir="${build.dir}" />
+			<exclude name="audio/" />
+		</jar>
+	</target>
+
+	<target name="dist" depends="jar">
+		<echo message="Building distro for ${os}" />
+		<copy todir="${dist.dir}/lib">
+			<fileset dir="${jars.dir}">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="${jars.dir}/${os}" />
+		</copy>
+		<copy todir="${dist.dir}">
+			<fileset dir="${resources.dir}/${os}" />
+		</copy>
+		<zip destfile="${dist.dir}/${dist.file}" basedir="${dist.dir}" excludes="**/*.zip" />
+	</target>
+
+	<target name="db.delete.files">
+		<delete verbose="true" quiet="true" failonerror="false">
+			<fileset dir=".">
+				<include name="all_*@all.com.*" />
+				<include name="all.*" />
+			</fileset>
+		</delete>
+		<delete verbose="true" quiet="true" failonerror="false" file="allLog.log" />
+	</target>
+
+	<target name="db.delete.files.allData">
+		<delete verbose="true" quiet="true" failonerror="false" dir="ALL Data" />
+	</target>
+
+	<target name="db.delete.files.libtorrent">
+		<delete verbose="true" quiet="true" failonerror="false" dir="libtorrent_logs0" />
+		<delete verbose="true" quiet="true" failonerror="false" dir="libtorrent_logs6881" />
+		<delete verbose="true" quiet="true" failonerror="false" file="lsd.log" />
+		<delete verbose="true" quiet="true" failonerror="false" file="upnp.log" />
+	</target>
+	
+	<target name="db.delete.files.deleteAllFiles">
+		<antcall target="db.delete.files" />
+		<antcall target="db.delete.files.allData" />
+		<antcall target="db.delete.files.libtorrent" />
+	</target>
+
+	<target name="run">
+		<java classname="com.all.client.Client" fork="true">
+			<classpath>
+				<!-- todo: change to use deploy folder -->
+				<fileset dir="dist">
+					<include name="${jar.name}" />
+					<include name="lib/*.jar" />
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="coverage.instrumentation">
+		<delete dir="${coverage.instr}" />
+		<delete dir="${coverage.workdir}" />
+		<mkdir dir="${coverage.instr}" />
+		<mkdir dir="${coverage.workdir}" />
+		<emma enabled="${coverage.enabled}">
+			<instr instrpath="${build.dir}" destdir="${coverage.instr}" metadatafile="${coverage.workdir}/basic.em" mode="copy">
+				<filter excludes="com.all.client.Client" />
+				<!--filter excludes="com.all.client.data.service.SpringClient" /-->
+				<filter excludes="com.all.client.data.HandleNotInitializedException" />
+				<filter excludes="com.all.client.view.*" />
+			</instr>
+		</emma>
+		<emma enabled="${coverage.enabled}">
+			<instr instrpath="${build.dir}" destdir="${coverage.instr}" metadatafile="${coverage.workdir}/actions.em" mode="copy">
+				<filter includes="com.all.client.view.actions.*" />
+			</instr>
+		</emma>
+		<emma enabled="${coverage.enabled}">
+			<instr instrpath="${build.dir}" destdir="${coverage.instr}" metadatafile="${coverage.workdir}/viewComponents.em" mode="copy">
+				<filter includes="com.all.client.view.components.*" />
+			</instr>
+		</emma>
+		<emma enabled="${coverage.enabled}">
+			<instr instrpath="${build.dir}" destdir="${coverage.instr}" metadatafile="${coverage.workdir}/actions.em" mode="copy">
+				<filter includes="com.all.client.view.registry.*" />
+			</instr>
+		</emma>
+		<emma enabled="${coverage.enabled}">
+			<instr instrpath="${build.dir}" destdir="${coverage.instr}" metadatafile="${coverage.workdir}/viewUtil.em" mode="copy">
+				<filter includes="com.all.client.view.util.*" />
+			</instr>
+		</emma>
+		<!-- add this to run a target with coverage 
+        	<jvmarg value="-Demma.coverage.out.file=${coverage}/coverage.emma" />
+        	<jvmarg value="-Demma.coverage.out.merge=true" />
+        -->
+	</target>
+
+	<target name="coverage.report" depends="coverage.instrumentation">
+		<mkdir dir="${coverage.report}" />
+		<emma enabled="${coverage.enabled}">
+			<report sourcepath="source" depth="method">
+				<fileset dir="${coverage.workdir}">
+					<include name="*.ec" />
+					<include name="*.em" />
+				</fileset>
+				<html outfile="${coverage.report}/coverage.html" />
+			</report>
+		</emma>
+		<emma enabled="${coverage.enabled}">
+			<report sourcepath="source" depth="class">
+				<fileset dir="${coverage.workdir}">
+					<include name="*.ec" />
+					<include name="*.em" />
+				</fileset>
+				<txt outfile="${coverage.report}/coverage.txt" />
+				<xml outfile="${coverage.report}/coverage.xml" />
+			</report>
+		</emma>
+		<emmaFail report="${coverage.report}/coverage.xml" minimumClassCoverage="90" minimumMethodCoverage="80" minimumLineCoverage="70" minimumBlockCoverage="70" />
+	</target>
+
+	<target name="test.failed" if="tests.failed">
+		<fail>JUnit tests failed</fail>
+	</target>
+</project>

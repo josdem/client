@@ -1,0 +1,265 @@
+SOFTWARE LICENSE AGREEMENT
+
+This software license agreement (the "Agreement") is a legal agreement between User and ALL.COM. 
+By downloading and installing, copying or otherwise using the Software, User agree to be bound by the terms of 
+this Agreement. If you do not agree to the terms of this Agreement, User may not download, install, copy or 
+use the software, and User may return the unused software to the vendor from which User acquired it within thirty 
+(30) days and request a refund of the license fee, if any, already paid upon showing proof of payment. 
+If User does not agree to the terms of the Agreement, User is not granted any rights whatsoever in the Software. 
+If User is not willing to be bound by these terms and conditions, User should not click on the "ACCEPT" button, 
+and may not access or otherwise use the Software or Services. 
+1.	Definitions.
+(a) 	"Service" means the service(s) that ALL.COM or its delegate will provide. 
+(b) 	"Software" means the ALL Client Alpha 2010.04.
+(c)	“Services” means Chat areas, profiles, file cabinets and/or other message or communication facilities 
+	and audio playback.
+(d)	"User" means the natural person or the entity that is agreeing to be bound by this Agreement, 
+	their employees and third party contractors that provide services to User.  
+
+2.	License Grant. 
+ALL.COM grants User a nonexclusive, nontransferable limited license to use Software for its Permitted Use. 
+The copies of Software provided to User under this Agreement are licensed, not sold, to User by ALL.COM. 
+ALL.COM reserves all rights not expressly granted herein. This license grant does not extend to the separately 
+licensed code listed in the Open Source and Third Party Licenses file.
+
+3.	Permitted use.
+User may use the Software for its own Individual Use, subject to and conditioned on its compliance with 
+this Agreement, the Technology Restrictions referred to in section 4 below, and the Open Source and Third 
+Party License conditions included in the Open Source and Party Licenses file included with the distribution 
+of the Software.  
+
+4.	Technology Restrictions.
+ User may not create, modify, or change the behavior of classes, interfaces, or sub-packages that are in any 
+way identified as "com.all.*", or similar convention as specified by ALL.COM in any naming convention designation.
+
+5.	Software Maintenance.
+ALL.COM is not obligated to provide maintenance or updates to User for the Software. However, ALL.COM may, 
+in its sole discretion, provide updates and/or supplements of the Software and/or related information to User 
+hereunder, in which case such updates shall also be deemed to be included in the Software and therefore governed 
+by this Agreement.
+
+6.	Restrictions.
+(a) User may make a single archival copy of Software, but otherwise may not copy, modify, or distribute Software. 
+However if the ALL.COM documentation accompanying Software lists specific portions of Software, such as header files, 
+class libraries, reference source code, and/or redistributable files, that may be handled differently, User may do so only 
+as provided in the ALL.COM documentation. (b) User may not rent, lease, lend or encumber Software. (c) User may not decompile, 
+or reverse engineer the Software. (d) User may not perform or attempt to perform any actions that would interfere with the proper 
+working of the Software or Services, prevent access to or the use of the Software or Services by ALL.COM’s other licensees or customers. 
+(e) Software may contain programs that perform automated collection of system data and/or automated software updating services. 
+System data collected through such programs may be used by ALL.COM, its subcontractors, and its service delivery partners for the purpose 
+of providing User with remote system services and/or improving ALL.COM's software and systems. (f) The foregoing 
+restrictions do not apply to code listed in the Open Source and Party Licenses file which is separately licensed 
+and is accordingly subject to separate restrictions. 
+
+7. 	Reservation of Rights and Ownership.
+The Software is protected by copyright, trade secret and other intellectual property laws. ALL.COM and licensors 
+of code listed in the Open Source and Third Party Licenses file own the title, copyright, and other worldwide 
+intellectual property rights in the Software and all copies of the Software. This Agreement does not grant User 
+any rights to trademarks or service marks of ALL.COM.
+
+8.	Open Source.
+Please note that portions of Software may be provided with notices and open source licenses from such communities 
+and third parties that govern the use of those portions, and any licenses granted hereunder do not alter any 
+rights and obligations User may have under such open source licenses, however, the disclaimer of warranty and 
+limitation of liability provisions in this Agreement will apply to all Software in this distribution.
+
+ 9.	Term and Termination. 
+User rights under this Agreement will terminate immediately without notice from ALL.COM if User materially 
+breach it or take any action in derogation of ALL.COM and/or its licensors' rights to Software. ALL.COM may 
+terminate this Agreement should any Software become, or in ALL.COM reasonable opinion likely to become, the 
+subject of a claim of intellectual property infringement or trade secret misappropriation. Upon termination, 
+User will cease use of, and destroy, Software and confirm compliance in writing to ALL.COM. Sections 1 and 6-14 
+will survive termination of the Agreement.
+
+ 10. 	Limited Warranty. 
+Unless required by applicable law or agreed to in writing, ALL.COM provides Software on an "AS IS" BASIS, 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, 
+any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. 
+User assume all risks associated with its enforcement of permissions under this Agreement.
+
+
+11.	Disclaimer of Warranty. 
+UNLESS STATED OTHERWISE HEREBY, ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, 
+INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT 
+ARE DISCLAIMED, EXCEPT TO THE EXTENT THAT THESE DISCLAIMERS ARE HELD TO BE LEGALLY INVALID. 
+
+12. 	Limitation of Liability. 
+TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL ALL.COM OR ITS LICENSORS BE LIABLE FOR ANY LOST 
+REVENUE, PROFIT OR DATA, OR FOR SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER 
+CAUSED REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF OR RELATED TO THE USE OF OR INABILITY TO USE 
+SOFTWARE, EVEN IF ALL.COM HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+
+13. 	 Governing Law. 
+Any action related to this Agreement will be governed by the laws of Mexico and prevailing Mexico’s federal law. 
+No choice of law rules of any jurisdiction shall apply. 
+
+14. 	Severability. 
+If any provision of this Agreement is held to be unenforceable, this Agreement shall remain in effect with 
+the provision omitted, unless omission would frustrate the intent of the parties, in which case this Agreement 
+will immediately terminate.
+
+
+
+CONVENIO DE ADHESIÓN DE LICENCIA DE USO DE PÁGINA DE INTERNET Y SOFTWARE Y PRIVACIDAD QUE CELEBRAN, POR UNA PARTE FOR THE GOOD OF ALL, A.C. (en lo sucesivo ALL), UNA ASOCIACIÓN CIVIL DEBIDAMENTE CONSTITUIDA Y EXISTENTE DE CONFORMIDAD CON LA LEYES DE LA REPÚBLICA MEXICANA Y, POR LA OTRA, EL USUARIO, SUJETÁNDOSE, AMBAS PARTES, A LO ESTABLECIDO EN LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS.
+D E C L A R A C I O N E S 
+1.- SI EL USUARIO NO DESEA SUJETARSE A LOS TÉRMINOS Y CONDICIONES ESTIPULADOS EN EL PRESENTE CONVENIO, EL USUARIO SE OBLIGA Y DEBE NO USAR NI EL SITIO NI EL SOFTWARE QUE SE ENCUENTRA ACCESIBLE EN LA PÁGINA DE INTERNET.
+2.- PARA EL CASO QUE EL USUARIO CONTINÚE EN EL USO www.ALL.com, DICHA ACCIÓN SE CONSIDERARÁ COMO SU ABSOLUTA Y EXPRESA ACEPTACIÓN A LOS TÉRMINOS Y CONDICIONES AQUÍ ESTIPULADOS. 
+3.- LA SOLA UTILIZACIÓN DE LA PÁGINA DE INTERNET LE OTORGA AL PÚBLICO EN GENERAL O A QUIEN LO USE, LA CONDICIÓN DE USUARIO (EN ADELANTE REFERIDO COMO EL "USUARIO" O LOS "USUARIOS") E IMPLICA LA ACEPTACIÓN, PLENA E INCONDICIONAL, DE TODAS Y CADA UNA DE LAS CONDICIONES GENERALES Y PARTICULARES INCLUIDAS EN ESTOS TÉRMINOS DE USO EN LA VERSIÓN PUBLICADA POR FOR THE GOOD OF ALL, A.C. EN EL MOMENTO MISMO EN QUE EL USUARIO ACCEDA A LA PÁGINA. 
+4.- CUALQUIER MODIFICACIÓN A LOS PRESENTES TÉRMINOS DE USO SERÁ REALIZADA CUANDO FOR THE GOOD OF ALL, A.C.  LO CONSIDERE APROPIADO, SIENDO EXCLUSIVA RESPONSABILIDAD DEL USUARIO ASEGURARSE DE TOMAR CONOCIMIENTO DE TALES MODIFICACIONES. 
+5.- DECLARA EL USUARIO QUE ENTIENDE Y ACEPTA QUE EL USO DEL SOFTWARE QUE SE PONE A SU DISPOSICION, LO USARÁ BAJO SU MÁS ESTRICTA RESPONSABILIDAD EN EL ENTENDIDO DE QUE EL UNICO Y ABSOLUTO RESPONSABLE DEL USO DEL SOFTWARE ES EL USUARIO.
+LAS PARTES DECLARAN QUE SON CIERTAS LAS ANTERIORES DECLARACIONES Y QUE AL NO EXISTIR ERROR, DOLO, MALA FE O CUALQUIER OTRO VICIO DE LA VOLUNTAD QUE PUDIERA NULIFICAR LA CELEBRACION DEL PRESENTE INSTRUMENTO, ESTÁN DE ACUERDO EN SUJETARSE AL TENOR DE LO ESTIPULADO EN LAS SIGUIENTES:
+
+C L Á U S U L A S
+1. Objeto
+a. Por virtud de la celebración de este convenio, FOR THE GOOD OF ALL, A.C. otorga y concede al Usuario el derecho no exclusivo, revocable y no transferible de ver y usar www.ALL.com y de usar el programa de cómputo (en lo sucesivo SOFTWARE o APLICACIÓN) que se pone a su disposición, de conformidad con los términos y condiciones que se estipulan en este Convenio. Para los efectos del presente convenio, las partes acuerdan que por usuario se entenderá a cualquier persona de cualquier naturaleza que ingrese a www.ALL.com y/o a cualquiera de las subpáginas que despliegan su contenido y/o a la persona de cualquier naturaleza que se dé de alta y/o use o descargue, cualquiera de los servicios que se ofrecen a través de dicha página de Internet, incluyendo la aplicación.
+b. El usuario sólo podrá imprimir y/o copiar cualquier información contenida o publicada en www.ALL.com exclusivamente para su uso personal, no comercial. En caso de ser persona moral se estará a lo dispuesto por el artículo 148, fracción IV de la Ley Federal del Derecho de Autor.
+c. La reimpresión, re-publicación, distribución, asignación, sublicencia, venta, reproducción electrónica o por cualquier otro medio de cualquier información, documento o gráfico de o que aparezca en www.ALL.com, en todo o en parte, para cualquier uso distinto al personal no comercial le está expresamente prohibido al Usuario, a menos que ALL le haya otorgado su autorización previamente y por escrito. 
+2. Contraprestación
+Use of this service by the users is completely free. 
+3. Idioma
+These terms of use are presented in Spanish. 
+If ALL provides a translation of these terms of use in any language other than Spanish, you shall acknowledge that this is done for convenience purposes and that your relationship with ALL shall be governed by what is laid out in these terms of use in Spanish. 
+4. Reglas para el Uso de www.ALL.com.
+El Usuario y ALL están de acuerdo en que el uso de www.ALL.com se sujetará a las siguientes reglas:
+1. Información contenida en www.ALL.com: El Usuario reconoce y acepta que la información publicada o contenida en www.ALL.com generada por FOR THE GOOD OF ALL, A.C., por los usuarios o por los Proveedores, será claramente identificada de forma tal que se reconozca que la misma proviene de FOR THE GOOD OF ALL, A.C.  o de los Proveedores o de los Usuarios.
+2. Las informaciones, conceptos y opiniones publicadas en www.ALL.com no necesariamente reflejan la posición de FOR THE GOOD OF ALL, A.C.  ni de sus empleados, oficiales, directores, accionistas, licenciantes, licenciatarios y concesionarios (en lo sucesivo los "Afiliados"). Por esta razón, FOR THE GOOD OF ALL, A.C. no se hace responsable por ninguna de las informaciones, opiniones y conceptos que se emitan en www.ALL.com. Asimismo, FOR THE GOOD OF ALL, A.C., no se hace responsable de la información contenida en la página de Internet, incluidas las subpáginas, en el entendido de que es bajo el propio riesgo y responsabilidad del usuario el uso y seguimiento de la misma.
+3. FOR THE GOOD OF ALL, A.C.  se reserva el derecho de bloquear el acceso o remover en forma parcial o total, toda información, comunicación o material que a su exclusivo juicio pueda resultar: (i) abusivo, difamatorio u obsceno, (ii) fraudulento, artificioso o engañoso, (iii) violatorio de derechos de autor, marcas, confidencialidad, secretos industriales o cualquier derecho de propiedad intelectual de un tercero, (iv) ofensivo o (v) de cualquier forma contravenga lo establecido en este Convenio. Si el Usuario desea obtener mayor información de un tema en específico proveído por FOR THE GOOD OF ALL, A.C. o los Proveedores, el Usuario deberá consultarlo directamente con cada uno de ellos, según corresponda y/o con un especialista en la materia.
+4. El Usuario reconoce que FOR THE GOOD OF ALL, A.C. no controla o censura previamente el contenido disponible en la Página de Internet. Por tal motivo, FOR THE GOOD OF ALL, A.C. no asume ninguna responsabilidad por el contenido provisto a la Página de Internet por proveedores independientes ajenos a FOR THE GOOD OF ALL, A.C., ni del contenido intercambiado y generado por los USUARIOS, ya que no tiene el control editorial sobre el contenido, información y/o material generado y/o provisto por terceros. Todas las opiniones, consejos, declaraciones, servicios, ofertas, u otras informaciones o contenidos expresados o puestos a disposición del público por terceros, pertenecen a su respectivo autor  y FOR THE GOOD OF ALL, A.C. no asume responsabilidad alguna frente a ello. FOR THE GOOD OF ALL, A.C., no garantiza la exactitud, veracidad, amplitud y/o utilidad de cualquier contenido provisto por tales terceros. Adicionalmente, FOR THE GOOD OF ALL, A.C. no es responsable ni garantiza la exactitud, exhaustividad, veracidad y/o confiabilidad de cualquier opinión, información, consejo o declaración expresados provisto por FOR THE GOOD OF ALL, A.C. a través de su Página de Internet. Bajo ninguna circunstancia FOR THE GOOD OF ALL, A.C. será responsable de cualquier daño y/o perjuicio, directo o indirecto, causado en virtud de la confianza del usuario en información obtenida a través de esta Página de Internet. FOR THE GOOD OF ALL, A.C. se reserva el derecho de suprimir o modificar el contenido de la Página de Internet que, a exclusivo juicio de FOR THE GOOD OF ALL, A.C. no cumpla con los estándares de FOR THE GOOD OF ALL, A.C. o que pudiera resultar contrario al ordenamiento jurídico vigente. Pero FOR THE GOOD OF ALL, A.C. no será responsable por cualquier falla o tardanza que se genere al eliminar tal material.
+5. Reglas de Uso del Software 
+For the good of All, A.C. ("ALL.COM”) DERECHO de SOFTWARE
+Licenciataria/Compañía: Entidad que recibe el Software.
+Fecha de Efectividad: Fecha en la que Usted descargó el Software. 
+Software:  ALL.COM Client Alpha 2010.04 
+Servicios: Áreas de conversación en línea (chat), perfiles, archiveros y/o otros mensajes o facilidades de comunicación y reproducción de audio. 
+Vigencia de la Licencia: Perpetua (sujeto a la terminación conforme al Contrato de Licencia de Software).
+Unidad Bajo Licencia: Copia del Software.
+Conteo de Unidad Bajo Licencia: Uno (1).
+Usos Permitidos: Usted solamente puede usar el Software para Su propio Uso Individual, sujeto y condicionado al cumplimiento POR PARTE DE USTED de los Términos Adicionales a continuación.  
+Términos Adicionales:
+1.    ALL.COM Restricciones de Tecnología del Cliente. Usted no puede crear, modificar o cambiar el comportamiento de las clases, interfaces o sub-paquetes que de cualquier manera sean identificados como "com.all.*", o convención similar como lo especifica ALL.COM en cualquier designación de convención de identificación.
+For the good of All, A.C. 
+CONTRATO DE LICENCIA DE SOFTWARE 
+Este contrato de licencia (el “Contrato”) as un contrato legal entre usted y For the good of All A.C. ("ALL). Usted debe aceptar los términos de este contrato antes de accesar o en contrario utilizar el Software o cualquiera de los servicios que ALL pueda proporcionar conforme a este contrato. Para tener acceso y utilizar el Software y los Servicios, la Licenciataria debe tener acceso al Internet. 
+Si usted no acepta los términos de este contrato, no se le concede ningún derecho de ninguna naturaleza en el Software. Si usted no está dispuesto a obligarse conforme a los términos y condiciones, usted  no debe dar clic en el botón “ACEPTAR” y no puede tener acceso o en contrario utilizar el Software o los Servicios. 
+5.1. Definiciones.
+(a) "Derecho" significa el juego colectivo de documentos aplicables autorizados por ALL que prueban su obligación para el alcance autorizado de uso de Software conforme a este contrato.
+(b) "Unidad Bajo Licencia" significa la unidad de medición mediante la cual el uso por parte de usted del Software y/o Servicio está bajo licencia, como se describe en su Derecho.
+(c) "Uso Permitido" significa el uso o usos del Software bajo licencia autorizados en este contrato como se específica en su Derecho. El Uso Permitido para cualquier paquete de Software de ALL no especificado en su Derecho será para uso de evaluación como se dispone en la Sección 3.
+(d) "Servicio" significa el servicio o servicios que ALL. o su delegado brindarán. 
+(e) "Software" significa el software ALL descrito en su Derecho. 
+(f) "Usted" y "Su" significan la persona o entidad legal especificada en el Derecho. 
+5. 2.         Otorgamiento y Derecho de Licencia.
+Sujeto a los términos de su Derecho, ALL le otorga una licencia no-exclusiva, intransferible para utilizar el Software para su Uso Permitido por la vigencia de la licencia. Su Derecho especificará (a) el Software bajo licencia, (b) el Uso Permitido, (c) la vigencia de la licencia y (d) las Unidades Bajo Licencia. 
+El Derecho se le entregará en formato electrónico cuando usted descargue el Software. 
+5. 3.         Uso Permitido.
+Uno o más de los siguientes Usos Permitidos aplicarán a su uso del Software. A menos que usted tenga un Derecho que expresamente lo permita, usted no puede usar el Software para ninguno de los otros Usos Permitidos. 
+(a) Uso Individual. Usted puede usar el Software de manera interna para uso personal, individual.
+(b) Uso Comercial. Usted puede usar el Software de manera interna para sus propios propósitos comerciales. 
+5. 4.         Unidades Bajo Licencia.
+Su Uso Permitido está limitado al número de Unidades Bajo Licencia establecidas en su Derecho. Si usted requiere Unidades Bajo Licencia adicionales, usted necesitará Derecho o Derechos adicionales.
+5. 5.          Mantenimiento de Software.
+ALL no está obligado a darle mantenimiento o actualizaciones del Software. Sin embargo, ALL. puede a su sola discreción, darle actualizaciones y/o complementos del software y/o información relacionada, conforme al presente, en cuyo caso, dichas actualizaciones también serán consideradas que se incluyen en el Software y por lo tanto, serán gobernadas por este contrato.
+5. 6.         Restricciones.
+(a) Las copias del Software proporcionadas a usted conforme a este contrato están bajo licencia, no vendidas a usted por ALL. ALL se reserve todos los derechos no expresamente otorgados. (b) Usted puede hacer una sola copia para archive del Software pero en contrario no puede copiar, modificar o distribuir el Software. Sin embargo, si la documentación de ALL que acompaña al Software lista partes especificas del Software, tales como archivos de nombre, librerías de clase, código fuente de referencia y/o archivos redistribuibles que puedan manejarse de distinta manera, usted lo puede hacer solamente como se establece en la documentación de ALL. (c) Usted no puede rentar, arrendar, prestar o enajenar el Software. (d) A menos que la aplicación esté prohibida por la ley aplicable, usted no puede descompilar o revertir la ingeniería del Software. (e) Usted no puede realizar o intentar realizar ninguna acción que interfiriera con la operación apropiada del Software o de los Servicios, evitar el acceso al Software o a los Servicios o el uso del Software o de los Servicios de las otras licenciatarias o clientes de ALL. (f) El Software puede contener programas que realicen la recolección automática de los datos del sistema y/o los servicios de actualización de software automatizados. ALL, sus sub-contratistas y sus socios de entrega de servicio pueden utilizar los datos del sistema reunidos a través de dichos programas con el propósito de brindarle servicios de sistema remotos y/o mejorar el software y sistemas de ALL. 
+ 5. 7. Reserva de Derechos y Propiedad.
+El Software está protegido por derechos de autor, secreto comercial y otras leyes de propiedad intelectual. ALL y sus licenciantes tienen la titularidad, derechos de autor y otros derechos de propiedad intelectual en el mundo en el Software y en todas las copias del Software. Este contrato no le otorga ningún derecho sobre las marcas o marcas de servicio de ALL.
+5. 8.         Compatibilidad con Java y Código Abierto.
+El Software puede contener tecnología Java. Usted no puede crear clases adicionales o modificaciones de la tecnología Java, excepto conforme a requerimientos de compatibilidad disponibles de acuerdo  a un contrato por separado disponible en www.java.net.
+ALL apoya y se beneficia de la comunidad global de los desarrolladores de código abierto, y gracias a la comunidad por sus importantes contribuciones y tecnología con base en estándares abiertos que ALL ha adoptado en muchos de sus productos.
+Tome nota por favor de que partes del Software pueden proporcionarse con avisos y licencias de código abierto de muchas comunidades y terceros que gobiernen el uso de esas partes y cualquier licencia otorgada conforme al presente no cambia ningún derecho u obligación que usted pueda tener conforme a dichas licencias de código abierto; sin embargo, las disposiciones de renuncia de garantía y limitación de responsabilidad en este contrato aplicarán a todo el Software en esta distribución.
+5. 9.         Vigencia y Terminación. 
+La vigencia de la licencia y servicio se establece en su Derecho o Derechos. Sus derechos conforme a este contrato terminarán inmediatamente sin aviso de ALL. si usted viola materialmente o toma cualquier acción para derogar los derechos de ALL y/o sus licenciantes en el Software. ALL puede dar por terminado este contrato en el caso de que cualquier Software se convierta o a la opinión razonable de ALL, sea probable que se convierta en la materia objeto de una reclamación de violación de propiedad intelectual o apropiación indebida de secreto comercial. Al momento de la terminación, usted dejará de utilizar y destruirá el Software y confirmará el cumplimiento por escrito a ALL. Las Secciones 5.1 y 5.6-5.15 sobrevivirán a la terminación del contrato.
+5. 10.          Garantía Limitada. 
+A menos que se requiera por la ley aplicable o se convenga por escrito, ALL proporciona el Software “COMO ESTÁ, SIN GARANTÍA O CONDICIONES DE NINGUNA CLASE, ya sea expresas o implícitas, incluyendo sin limitación, cualquier garantía o condiciones de TITULO, NO-VIOLACIÓN, COMERCIALIZACIÓN o AJUSTE A UN PROPÓSITO ESPECÍFICO. Usted asume cualquier riesgo asociado con su ejercicio de permisos de acuerdo a este contrato.
+5. 11.         Renuncia de Garantía. 
+A MENOS QUE SE ESPECIFIQUE EN ESTE CONTRATO, TODAS LAS CONDICIONES EXPRESAS O IMPLÍCITAS, MANIFESTACIONES O GARANTÍAS INCLUYENDO CUALQUIER GARANTÍA DE COMERCIALIZACIÓN IMPLÍCITA, AJUSTE A UN PROPÓSITO EN PARTICULAR O NO-VIOLACIÓN SE RENUNCIAN, EXCEPTO EN LA MEDIDA QUE ESTAS RENUNCIAS SE CONSIDEREN LEGALMENTE INVÁLIDAS. 
+5. 12.          Limitación de Responsabilidad. 
+EN LA MEDIDA NO PROHIBIDA POR LA LEY, EN NINGÚN CASO ALL.COM O SUS LICENCIANTES SERÁN RESPONSABLES POR NINGUNA GANANCIA, UTILIDAD O DATOS PERDIDOS POR DAÑOS ESPECIALES, INDIRECTOS, CONSECUENCIALES O PUNITIVOS; SIN EMBARGO, CAUSADOS INDEPENDIENTEMENTE DE LA TEORÍA DE RESPONSABILIDAD, QUE SURJA O SE RELACIONE CON EL USO O INCAPACIDAD DE USAR EL SOFTWARE, AÚN SI ALL.COM HA SIDO NOTIFICADO DE LA POSIBILIDAD DE DICHOS DAÑOS. 
+5. 13.           Ley Gobernante. 
+Cualquier acción relacionada con este contrato será gobernada por la ley mexicana y la ley federal reguladora de México. No aplicará ninguna selección de reglas de ley de ninguna jurisdicción. 
+5. 14.          Separabilidad. 
+Si cualquier disposición de este contrato se considera no ejercible, este contrato permanecerá en efecto con la disposición omitida, a menos que la omisión frustrara la intención de las partes, en cuyo caso, este Contrato terminará inmediatamente.
+5. 15.          Integración. 
+Este contrato, incluyendo cualquier término contenido en su Derecho, as el convenio total entre usted y ALL con relación a su materia objeto. Reemplaza toda comunicación, propuesta, manifestación y garantía anterior o actual, verbal o por escrito y prevalece sobre cualquier término en conflicto o adicional de cualquier cotización, pedido, reconocimiento u otra comunicación entre las partes con relación a su materia objeto durante la vigencia del contrato. Ninguna modificación de este contrato será obligatoria, a menos que sea por escrito y firmada por un representante autorizado de cada una de las partes.
+El SOFTWARE o la aplicación, como en los programas peer-to-peer ("P2P")  as capaz de ser utilizado para compartir materiales que el titular de derechos de autor no haya autorizado compartir, Es ilícito utilizar el Programa para violar los derechos de propiedad intelectual de otros o para compartir, distribuir o descargar la información protegida, exclusiva y/o confidencial de otros sin autorización o para buscar, enviar, compartir, distribuir o descargar materiales pornográficos ilegales, incluyendo pornografía infantil (conjuntamente, “Materiales Ilegales”). Al utilizar el Programa, usted acepta y manifiesta que usted no utilizará el Programa para compartir, distribuir o descargar Materiales Ilegales.
+www.ALL.com y/o el SOFTWARE no reproducen, distribuyen, anuncian públicamente o transforman ninguna propiedad intelectual. Los resultados generados por las búsquedas de los usuarios muestran solamente las ligas a archivos o páginas que cumplen con los criterios de búsqueda celebrados y no se almacenan en este sitio web. El usuario está consciente que ALL no asume ninguna obligación de controlar, supervisar o inspeccionar los archivos o páginas que están ligados como resultados de búsqueda. Sin embargo, ALL retirará todos aquellos resultados que realmente sepa son ilegales. ALL no es responsable de la confiabilidad o seguridad de los archivos que aparecen ligados como resultados de búsqueda ni es responsable de asegurar que están libres de virus. Es decisión del usuario proteger su sistema con las medidas de seguridad necesarias. 
+6. Formatos 
+Los usuarios reconocen que al proporcionar la información de carácter personal requerida en alguno de los servicios que se prestan en este web site, otorgan a FOR THE GOOD OF ALL, A.C., la autorización señalada en el artículo 109 de la Ley Federal del Derecho de Autor. En todos los casos, los usuarios responderán de la veracidad de la información proporcionada a FOR THE GOOD OF ALL, A.C.
+Asimismo, para la prestación de servicio, el usuario, además se obliga a aceptar los términos y condiciones estipulados para tal efecto.
+6. Derechos de Autor y Propiedad Industrial.
+FOR THE GOOD OF ALL, A.C., y www.ALL.com y sus logotipos y todo el material que aparece en la página de Internet referida, son marcas, nombres de dominio y/o nombres comerciales propiedad de sus respectivos titulares protegidos por los tratados internacionales y leyes aplicables en materia de propiedad intelectual y derechos de autor.
+EL SOFTWARE o la aplicación, like all peer-to-peer ("P2P") programs, is capable of being used to share materials that the copyright owner has not authorized be shared. It is unlawful to use the Program to infringe the intellectual property rights of others, or to share, distribute or download others' protected, proprietary and/or confidential information without authorization, or to search for, send, share, distribute or download unlawful pornographic materials, including child pornography (collectively "Illegal Materials"). By using the Program you agree and represent that you will not use the Program to share, distribute or download Illegal Materials. 
+www.ALL.com y/o EL SOFTWARE does not reproduce, distribute, publicly announce or transform any intellectual property. The results generated by the users’ searches only show the links to files or pages that meet the search criteria entered and are not hosted on this website. The user is aware that ALL does not assume any obligation to control, supervise or inspect the files or pages that are linked as search results. Nevertheless, ALL shall remove all of those results that it actually knows to be illegal. ALL is not responsible for the reliability or security of the files that appear linked as search results, nor is it responsible for ensuring that they are free from virus. It is up to the user to protect their system with the necessary security measures. 
+Los derechos de autor sobre el contenido, organización, recopilación, compilación, información, logotipos, fotografías, imágenes, programas, aplicaciones, o en general cualquier información contenida o publicada en www.ALL.com se encuentran debidamente  protegidos a favor de FOR THE GOOD OF ALL, A.C., sus Afiliados, Proveedores y/o de sus respectivos propietarios, de conformidad con la legislación aplicable en materia de propiedad intelectual e industrial.
+Se prohíbe expresamente al usuario modificar, alterar o suprimir, ya sea en forma total o parcial, los avisos, marcas, nombres comerciales, señas, anuncios, logotipos o en general cualquier indicación que se refiera a la propiedad de información contenida en www.ALL.com
+En caso de que el Usuario transmita a FOR THE GOOD OF ALL, A.C. cualquier información, programas, aplicaciones, software o en general cualesquier material que requiera ser licenciado a través de www.ALL.com, el Usuario le otorga a FOR THE GOOD OF ALL, A.C. en este acto, una licencia perpetua, universal, gratuita, no exclusiva, mundial y libre de regalías, incluyendo entre los derechos otorgados, el derecho de sublicenciar, vender, reproducir, distribuir, transmitir, crear trabajos derivados, exhibirlos y ejecutarlos públicamente. 
+Lo establecido en el inciso anterior se aplicará igualmente a cualquier otra información que el Usuario envíe o transmita a FOR THE GOOD OF ALL, A.C. (incluyendo, sin limitación alguna, ideas para renovar o mejorar el sitio www.ALL.com), sea que éstas hayan sido incluidas en cualquier espacio de www.ALL.com en virtud de otros medios o modos de transmisión ya conocidos o en el futuro desarrollados. 
+Por lo anterior, el Usuario renuncia expresamente en este acto a intentar cualquier acción, demanda o reclamación en contra de FOR THE GOOD OF ALL, A.C., sus Afiliados o Proveedores por cualquier actual o eventual violación de cualquier derecho de autor o propiedad intelectual derivado de la información, programas, aplicaciones, software, ideas y demás material que el propio Usuario envíe a www.ALL.com.
+Es nuestra política actuar contra las violaciones que en materia de Propiedad Intelectual se pudieran generar u originar según lo estipulado en la legislación aplicable y en otras leyes de propiedad intelectual aplicables, incluyendo la eliminación o el bloqueo del acceso a material que se encuentra sujeto a actividades que infrinjan el derecho de propiedad intelectual, de terceros.
+No obstante que la legislación aplicable para todo lo relativo a www.ALL.com es la Mexicana, deseamos tener un mecanismo, para el caso de que si algún Usuario o un tercero consideren que cualquiera de los Contenidos que se encuentren o sean introducidos en www.ALL.com y/o cualquiera de sus Servicios, violen sus derechos de propiedad intelectual, deberán enviar una notificación a www.ALL.com a la dirección que arriba aparece, en la que indiquen, cuando menos: (i) los datos personales verídicos (nombre, dirección, número de teléfono y dirección de correo electrónico del reclamante); (ii) la firma autógrafa con los datos personales del titular de los derechos de propiedad intelectual; (iii) la indicación precisa y completa del (los) Contenido(s) protegido(s) mediante los derechos de propiedad intelectual supuestamente infringidos, así como de su localización en www.aeromexico.com; (iv) una declaración expresa y clara de que la introducción del (los) Contenido(s) indicado(s) se ha realizado sin el consentimiento del titular de los derechos de propiedad intelectual supuestamente infringidos; (v) una declaración expresa, clara y bajo la responsabilidad del reclamante de que la información proporcionada en la notificación es exacta y de que la introducción del (los) Contenido(s) constituye una violación de sus derechos de propiedad intelectual.
+El Lic. Agustín Ríos es el abogado designado por FOR THE GOOD OF ALL, A.C. para resolver este tipo de anomalías. Para reportar cualquier infracción sobre los contenidos de la página web, por favor contacte a:
+Nombre:
+Lic. Agustín Ríos Aguilar
+Correo Electrónico:
+arios@riosabogados.com
+Dirección:
+Goldsmith No. 38 Despachos 103-105, Col. Chapultepec PolancoC.P. 11560 México D.F.
+Teléfono y Fax:
+5280-2789
+7. Negación de Garantías.
+EL USUARIO ESTÁ DE ACUERDO QUE EL USO DE www.ALL.com SE REALIZA BAJO SU PROPIO RIESGO, QUE LOS SERVICIOS Y PRODUCTOS QUE SE PRESTAN Y OFRECEN  DE MANERA GRATUITA, EN www.ALL.com SE PREVEEN SOBRE UNA BASE "TAL CUAL" Y "SEGÚN SEAN DISPONIBLES". FOR THE GOOD OF ALL, A.C. NO GARANTIZA QUE www.ALL.com SATISFAGA LOS REQUERIMIENTOS DEL USUARIO, O QUE LOS SERVICIOS DE www.ALL.com SE MANTENGAN SIEMPRE ININTERRUMPIDOS, EN TIEMPO, SEGUROS O LIBRES DE ERRORES.
+FOR THE GOOD OF ALL, A.C. NO GARANTIZA O AVALA EN NINGUNA FORMA LA VERACIDAD, PRECISIÓN, LEGALIDAD, MORALIDAD O NINGUNA OTRA CARACTERÍSTICA DEL CONTENIDO DEL MATERIAL QUE SE PUBLIQUE EN www.ALL.com
+FOR THE GOOD OF ALL, A.C. SE LIBERA DE CUALQUIER RESPONSABILIDAD Y CONDICIONES, TANTO EXPRESAS COMO IMPLÍCITAS, EN RELACIÓN CON LOS SERVICIOS E INFORMACIÓN CONTENIDA O DISPONIBLE EN O A TRAVÉS DE www.ALL.com INCLUYENDO, SIN LIMITACIÓN ALGUNA:
+* LA DISPONIBILIDAD DE USO DE www.ALL.com
+* LA AUSENCIA DE VIRUS, ERRORES, DESACTIVADORES O CUALESQUIER OTRO MATERIAL CONTAMINANTE O CON FUNCIONES DESTRUCTIVAS EN LA INFORMACIÓN O PROGRAMAS DISPONIBLES EN O A TRAVÉS DE www.ALL.com  O, EN GENERAL CUALQUIER FALLA EN www.ALL.com y/o del software que se pone a disposición del USUARIO.
+* NO OBSTANTE LO ANTERIOR, FOR THE GOOD OF ALL, A.C.  O SUS PROVEEDORES PODRÁN ACTUALIZAR EL CONTENIDO DE www.ALL.com CONSTANTEMENTE, POR LO QUE SE PIDE AL USUARIO TOMAR EN CUENTA QUE, ALGUNA INFORMACIÓN PUBLICITADA O CONTENIDA EN O A TRAVÉS DE www.ALL.com PUEDE HABER QUEDADO OBSOLETA Y/O CONTENER IMPRECISIONES O ERRORES TIPOGRÁFICOS U ORTOGRÁFICOS. 
+8. Limitaciones a la Responsabilidad.
+HASTA EL MÁXIMO PERMITIDO POR LAS LEYES APLICABLES, FOR THE GOOD OF ALL, A.C.  NO SERÁ RESPONSABLE, EN NINGÚN CASO, POR CUALESQUIER DAÑOS DIRECTOS, ESPECIALES, INCIDENTALES, INDIRECTOS, O CONSECUENCIALES QUE EN CUALQUIER FORMA SE DERIVEN O SE RELACIONEN CON: 
+* EL USO O EJECUCIÓN DE www.ALL.com CON EL RETRASO O FALTA DE DISPONIBILIDAD DE USO DE FOR THE GOOD OF ALL, A.C. 
+* LA PROVEEDURÍA DE O FALTA DE PROVEEDURÍA DE SERVICIOS DE CUALESQUIER INFORMACIÓN, SOFTWARE O GRÁFICOS CONTENIDOS O PUBLICADOS EN O A TRAVÉS DE www.ALL.com
+* DE LA ACTUALIZACIÓN O FALTA DE ACTUALIZACIÓN DE LA INFORMACIÓN, 
+* QUE LA INFORMACIÓN HAYA SIDO ALTERADA O MODIFICADA, EN TODO O EN PARTE, LUEGO DE HABER SIDO INCLUIDA EN www.ALL.com
+* CUALQUIER OTRO ASPECTO O CARACTERÍSTICA DE LA INFORMACIÓN CONTENIDA O PUBLICADA EN www.ALL.com O A TRAVÉS DE LAS LIGAS QUE EVENTUALMENTE SE INCLUYAN EN EL MISMO
+* LA PROVEEDURÍA O FALTA DE PROVEEDURÍA QUE LOS DEMÁS SERVICIOS, TODOS LOS SUPUESTOS ANTERIORES SERÁN VIGENTES, AÚN EN LOS CASOS EN QUE SE LE HUBIERE NOTIFICADO O AVISADO A FOR THE GOOD OF ALL, A.C. ACERCA DE LA POSIBILIDAD DE QUE SE OCASIONARAN DICHOS DAÑOS. 
+9. Modificaciones a www.ALL.com
+FOR THE GOOD OF ALL, A.C. podrá en cualquier momento y cuando lo considere conveniente, sin necesidad de aviso al Usuario, realizar correcciones, adiciones, mejoras o modificaciones al contenido, presentación, información, servicios, áreas, bases de datos y demás elementos de www.ALL.com sin que ello de lugar ni derecho a ninguna reclamación o indemnización, ni que lo mismo implique reconocimiento de responsabilidad alguna a favor del Usuario. 
+10. Modificaciones al Convenio. 
+FOR THE GOOD OF ALL, A.C.  se reserva el derecho de modificar los términos y condiciones de éste Convenio en cualquier tiempo, siendo efectivas dichas modificaciones de forma inmediata: 
+* Por la publicación en www.ALL.com del Convenio modificado ó 
+* Por la notificación al Usuario sobre dichas modificaciones. 
+El Usuario está de acuerdo en revisar este Convenio periódicamente a fin de estar al tanto de dichas modificaciones. No obstante lo anterior, cada ocasión que el Usuario accese a www.ALL.com se considerará como aceptación absoluta a las modificaciones del Convenio. 
+11. Términos Adicionales. 
+Ocasionalmente, FOR THE GOOD OF ALL, A.C. podrá adicionar los términos y condiciones del presente Convenio con provisiones adicionales relativas a áreas específicas o nuevos servicios que se proporcionen en o a través de www.ALL.com ("Términos Adicionales"), los cuales serán publicados en las áreas específicas o nuevos servicios de www.ALL.com para su lectura y aceptación. El Usuario reconoce y acepta que dichos Términos Adicionales forman parte integrante del presente Convenio para todos los efectos legales a que haya lugar.
+12. Cesión de Derechos.
+FOR THE GOOD OF ALL, A.C. podrá, en cualquier tiempo y cuando así lo estime conveniente, ceder total o parcialmente sus derechos y obligaciones derivados del presente Convenio. En virtud de dicha cesión, FOR THE GOOD OF ALL, A.C. quedará liberada de cualquier obligación a favor del Usuario establecida en el presente convenio. 
+13. Indemnización. 
+El Usuario está de acuerdo en indemnizar a FOR THE GOOD OF ALL, A.C., sus Afiliados, Proveedores, Vendedores y Asesores de cualquier acción, demanda o reclamación (incluso de honorarios de abogados y de costas judiciales) derivadas de cualesquier incumplimiento por parte del Usuario al presente Convenio, incluyendo, sin limitación de alguna de las derivadas: 
+* De cualquier aspecto relativo al uso de www.ALL.com
+*   De la información contenida o disponible en o a través de www.ALL.com
+*   De injurias, difamación o cualesquier otra conducta violatoria del presente convenio por parte del usuario en el uso de www.ALL.com
+*   De violación a las leyes aplicables o tratados internacionales relativos a los derechos de autor o propiedad intelectual, contenidos o disponibles en, o a través de www.ALL.com
+14. Terminación
+FOR THE GOOD OF ALL, A.C. se reserva el derecho, a su exclusiva discreción, y sin necesidad de aviso o notificación al Usuario, para:
+* Terminar definitivamente el presente Convenio; 
+* Descontinuar o dejar de publicar definitivamente www.ALL.com sin responsabilidad alguna para FOR THE GOOD OF ALL, A.C., sus Afiliados o Proveedores. 
+15. Subsistencia. 
+Estos términos y condiciones, así como los Términos Adicionales constituyen el acuerdo íntegro entre las partes, y sustituye cualquier otro acuerdo o convenio celebrado con anterioridad. Cualesquier cláusula o provisión del presente Convenio así como de los Términos Adicionales, legalmente declarada inválida, será eliminada o modificada, a elección de FOR THE GOOD OF ALL, A.C., a fin de corregir su vicio o defecto. Sin embargo, el resto de las cláusulas o provisiones mantendrán su fuerza, obligatoriedad y validez.
+16. No Renuncia de Derechos.
+La inactividad por parte de FOR THE GOOD OF ALL, A.C., sus Afiliados o Proveedores al ejercicio de cualquier derecho o acción derivados del presente Convenio, en ningún momento deberá interpretarse como renuncia a dichos derechos o acciones. 
+17. Legislación Aplicable y Jurisdicción. 
+Las partes expresan que el presente contrato, se regirá por las disposiciones legales aplicables en la República Mexicana.
+Para el caso de que exista una disputa o controversia, derivada de la interpretación, ejecución o  cumplimiento del contrato o de cualquiera de los documentos que del mismo se deriven, o que guarden relación con éste, las partes amigablemente, buscarán llegar a un acuerdo dentro de un plazo de treinta (30) días naturales, contados a partir de la fecha en que surja cualquier diferencia y se notifique por escrito sobre dicho evento a la contraparte, deduciendo el proceso de mediación ante la Cámara Nacional de Comercio de la Ciudad de México (CANACO), llevándose al amparo del Reglamento vigente al momento de que se presente la controversia. 
+En caso de que no se llegare a un acuerdo, ambas partes convienen en este acto en someter todas las desavenencias que deriven del CONTRATO o de cualquiera de los documentos que del mismo se deriven, o que guarden relación con éste o con aquéllos, serán resueltas de manera definitiva se someten a la competencia y leyes de los tribunales de la Ciudad de México, Distrito Federal renunciando expresamente a cualquier fuero distinto que por razones de sus domicilios presentes o futuros pudieren corresponderles.
+Política de Privacidad sobre el 
+Uso de Información y Bases de Datos.
+Es importante hacer del conocimiento del Usuario, que FOR THE GOOD OF ALL, A.C., respeta el Derecho a la Protección de Datos Personales, consagrada en el artículo 16, segundo Párrafo de la Constitución Política de los Estados Unidos Mexicanos, por lo que al efecto, se establece la siguiente Política de Uso que forma parte del CONVENIO DE ADHESIÓN PARA USO DE LA PÁGINA DE INTERNET www.ALL.com Y LICENCIA DE USO DE SOFTWARE QUE CELEBRAN POR UNA PARTE FOR THE GOOD OF ALL, A.C. Y POR LA OTRA, EL USUARIO.
+A través de www.ALL.com FOR THE GOOD OF ALL, A.C.  puede obtener diversa información:
+a. Toda la Información Agregada e Información Personal que se obtenga del Usuario por el uso de www.ALL.com y/o a través del uso de la aplicación o software que otorga en comodato a los Usuarios, puede compilarse y fijarse en una base de datos (en lo sucesivo "Base de Datos") propiedad FOR THE GOOD OF ALL, A.C., información que se almacena para protegerla y evitar su pérdida, uso indebido, o alteración. No obstante lo anterior, FOR THE GOOD OF ALL, A.C. en ninguna forma garantiza su seguridad, ni que la misma puede ser interceptada, reproducida o robada por terceros.
+b. El Usuario reconoce y acepta que FOR THE GOOD OF ALL, A.C. no obtiene la Información Personal automáticamente, sino que requiere que el Usuario se la proporcione en forma directa a través de www.ALL.com o por otros medios. Queda a la libre discreción del Usuario, sin responsabilidad para FOR THE GOOD OF ALL, A.C., proporcionar su Información Personal.
+c. En caso de que el usuario decida enviar información personal a través de los medios dispuestos para tal efecto, el Usuario, para efectos de lo dispuesto en el artículo 76bis de la Ley Federal de Protección al Consumidor, otorga su consentimiento expreso de manera electrónica, para que FOR THE GOOD OF ALL, A.C.  utilice, comercialice, difunda y/o transmita su información a terceras personal, sin su previo consentimiento. Asimismo, para efectos de lo dispuesto en los artículos 16, 18 y 18bis de la Ley Federal de Protección al Consumidor, el usuario otorga su consentimiento expreso y aceptación para recibir información con carácter o fines mercadotécnicos o publicitarios de FOR THE GOOD OF ALL, A.C.
+d. En cualquier caso, el Usuario faculta a FOR THE GOOD OF ALL, A.C., de la forma más amplia que legalmente proceda para utilizar la Información Personal y Agregada del Usuario:
+(i) a fin de resolver controversias o disputas relacionadas con www.ALL.com y violaciones al presente Convenio: (ii) para posibilitar a FOR THE GOOD OF ALL, A.C. que opere correctamente; y (iii) en los casos que la ley así lo requiera.
+e. Debido a que www.ALL.com recopila cierto tipo de información acerca de los usuarios de este sitio y de los servicios que a través de él se ofrecen, es importantísimo para FOR THE GOOD OF ALL, A.C. que el usuario entienda plenamente nuestra política con respecto al uso de la información que reunimos. A continuación exponemos la política de privacidad, la cual, le explica qué información recopilamos, cómo la usamos y cómo puede corregirse o cambiarse.
+
+Cambios en la política de www.ALL.com referente a privacidad.
+Si cambia nuestra política de privacidad de www.ALL.com anunciaremos aquí dichos cambios, de manera que usted siempre pueda saber qué información recogemos, cómo podríamos usar dicha información y si la revelaremos a alguien.

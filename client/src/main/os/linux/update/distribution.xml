@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources/i18n</directory>
+            <outputDirectory>/System/i18n</outputDirectory>
+            <excludes>
+                <exclude>disclaimer.htm</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/app-resources/empty-jars</directory>
+            <outputDirectory>/System/Jar</outputDirectory>
+            <excludes>
+                <exclude>swtbrowser.jar</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>    
+            <unpack>false</unpack>
+            <outputDirectory>/System/Jar</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <!-- external dependencies -->
+                <include>com.googlecode.ehcache-spring-annotations:ehcache-spring-annotations</include>
+                <include>com.miglayout:miglayout</include>
+                <include>com.restfb:restfb</include>
+                <include>commons-lang:commons-lang</include>
+                <include>org.igniterealtime.smack:smack</include>
+                <include>org.igniterealtime.smack:smackx</include>
+                <include>org.phex:Phex</include>
+                <include>org.twitter4j:twitter4j-core</include>
+                <!-- all.com dependencies -->
+                <include>com.all:*</include>
+                <include>com.all.client.client-commons:*</include>
+                <include>com.all.client.model:*</include>
+                <include>com.all.media:*</include>
+                <include>com.all.shared:*</include>
+            </includes>
+            <excludes>
+                <exclude>com.all:launcher</exclude>
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+</assembly>

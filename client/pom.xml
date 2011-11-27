@@ -1,0 +1,695 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.all</groupId>
+	<artifactId>client</artifactId>
+	<name>client</name>
+	<version>${snapshot.version}</version>
+
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>com.all.maven</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<!-- DEFAULT PROPERTIES LOCALHOST -->
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<ultrapeers.list>localhost</ultrapeers.list>
+		<tracker.url>http://localhost:8081/tracker/</tracker.url>
+		<all.server.url>http://localhost:8083/all-server/services/</all.server.url>
+		<email_server_uri>http://189.204.69.162:8080/emailer/services/</email_server_uri>
+		<restdownload.url>http://localhost:8080/rds/rest</restdownload.url>
+		<environment>localhost</environment>
+		<artifact.version>0.0.29</artifact.version>
+		<artifact.description>Alpha Version</artifact.description>
+	</properties>
+
+	<!-- PROFILES ENVIRONMENTS -->
+	<profiles>
+
+		<!-- PRODUCTION -->
+		<profile>
+			<id>production</id>
+			<properties>
+				<ultrapeers.list>184.72.59.165,184.72.59.172,184.72.236.93,184.72.236.94</ultrapeers.list>
+				<tracker.url>http://tckr.mc-all.com/tracker/</tracker.url>
+				<!-- TODO CHECK THIS NAME WITH FER -->				
+				<all.server.url>http://lbrs.mc-all.com/all-server/services/</all.server.url>
+				<mobile.server.url>http://mobile.all.com/mobile/services/</mobile.server.url>
+				<email_server_uri>http://189.204.69.171:8080/emailer/services/</email_server_uri>
+				<restdownload.url>http://rds.mc-all.com:8080/rds/rest</restdownload.url>
+				<environment>production</environment>
+			</properties>
+		</profile>
+
+		<!-- STAGING -->
+		<profile>
+			<id>staging</id>
+			<properties>
+				<ultrapeers.list>184.73.230.210,184.73.214.15</ultrapeers.list>
+				<tracker.url>http://184.72.47.194:8080/tracker/</tracker.url>
+				<all.server.url>http://184.72.47.194:8080/all-server/services/</all.server.url>
+				<mobile.server.url>http://mobile.all.com/mobile/services/</mobile.server.url>
+				<email_server_uri>http://189.204.69.162:8080/emailer/services/</email_server_uri>
+				<restdownload.url>http://50.16.40.12:8080/rds/rest</restdownload.url>
+				<environment>staging</environment>
+			</properties>
+		</profile>
+
+		<!-- DEVELOPMENT -->
+		<profile>
+			<id>development</id>
+			<properties>
+				<ultrapeers.list>192.168.2.150,192.168.2.151</ultrapeers.list>
+				<tracker.url>http://192.168.2.152:8080/tracker/</tracker.url>
+				<all.server.url>http://192.168.2.152:8080/all-server/services/</all.server.url>
+				<email_server_uri>http://189.204.69.162:8080/emailer/services/</email_server_uri>
+				<mobile.server.url>http://192.168.2.153:8080/mobile/services/</mobile.server.url>
+				<restdownload.url>http://192.168.2.153:8080/rds/rest</restdownload.url>
+				<environment>development</environment>
+			</properties>
+		</profile>
+
+		<!-- LocalDevelopment -->
+		<profile>
+			<id>localDev</id>
+			<properties>
+				<ultrapeers.list>192.168.2.150,192.168.2.151</ultrapeers.list>
+				<tracker.url>http://localhost:8080/tracker/</tracker.url>
+				<all.server.url>http://localhost:8080/all-server/services/</all.server.url>
+				<email_server_uri>http://189.204.69.162:8080/emailer/services/</email_server_uri>
+				<restdownload.url>http://192.168.2.153:8080/rds/rest</restdownload.url>
+				<environment>localDev</environment>
+			</properties>
+		</profile>
+
+		<!-- EXECUTED AUTOMATICALLY WHEN WINDOWS OS IS DETECTED -->
+		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>windows</family>
+				</os>
+			</activation>
+			<properties>
+				<distribution.descriptor>src/main/os/windows/assemble/distribution.xml</distribution.descriptor>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>com.all</groupId>
+					<artifactId>browser-swt</artifactId>
+					<version>${snapshot.version}</version>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.4.3</version>
+						<configuration>
+							<extraJvmArguments>-Xmx1024m -Xms128m -Djava.library.path=../repo
+								-Djna.library.path=../repo</extraJvmArguments>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>nsis-maven-plugin</artifactId>
+						<version>1.0-SNAPSHOT</version>
+						<configuration>
+							<outputFile>${project.build.directory}/${env.JOB_NAME}-${SVN_REVISION}.exe</outputFile>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>install</phase>
+								<configuration>
+									<tasks>
+										<delete file="${basedir}/ipTrackerFile.properties" />
+										<exec
+											executable="${basedir}/src/main/os/windows/scripts/CreateIpTrackerFile.bat">
+											<arg value="${tracker.url}" />
+											<arg value="${basedir}" />
+											<arg value="${artifact.version}" />
+										</exec>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- EXECUTED AUTOMATICALLY WHEN MAC OS IS DETECTED -->
+		<profile>
+			<id>mac</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<distribution.descriptor>src/main/os/mac/assemble/distribution.xml</distribution.descriptor>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>com.all</groupId>
+					<artifactId>browser-mozilla</artifactId>
+					<version>${snapshot.version}</version>
+				</dependency>
+			</dependencies>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/os/mac/native</directory>
+					</resource>
+					<resource>
+						<directory>src/main/os/mac/mozilla</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-cli</id>
+								<configuration>
+									<tasks>
+										<property name="env.JOB_NAME" value="null" />
+										<property name="SVN_REVISION" value="null" />
+										<property name="client.dist.number" value="${SVN_REVISION}" />
+										<property name="client.build.number" value="${env}" />
+										<property name="macOsXAntDir"
+											value="/Users/metallica/automated_Installer/OfflineInstallerMacTest" />
+										<property name="targetDirForBuild" value="${basedir}/target" />
+										<property name="artifactName" value="${env.JOB_NAME}-${SVN_REVISION}" />
+										<property name="buildTargetDir" value="${basedir}/target" />
+										<property name="fileFromBuild"
+											value="${basedir}/target/${artifactName}.zip" />
+										<property name="ipTrackerInstaller" value="${tracker.url}" />
+										<property name="client.version" value="${artifact.version}" />
+										<ant antfile="${macOsXAntDir}/build.xml" dir="${macOsXAntDir}">
+											<target name="generateInstallerMacOSX" />
+										</ant>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- EXECUTED AUTOMATICALLY WHEN LINUX OS IS DETECTED -->
+		<profile>
+			<id>linux</id>
+			<activation>
+				<os>
+					<family>linux</family>
+				</os>
+			</activation>
+			<properties>
+				<distribution.descriptor>src/main/os/linux/assemble/distribution.xml</distribution.descriptor>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>com.all</groupId>
+					<artifactId>browser-mozilla</artifactId>
+					<version>${snapshot.version}</version>
+				</dependency>
+			</dependencies>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/os/linux/native</directory>
+					</resource>
+					<resource>
+						<directory>src/main/os/linux/mozilla</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-cli</id>
+								<configuration>
+									<tasks>
+										<property name="env.JOB_NAME" value="null" />
+										<property name="SVN_REVISION" value="null" />
+										<property name="client.dist.number" value="${SVN_REVISION}" />
+										<property name="client.build.number" value="${env}" />
+										<property name="macOsXAntDir"
+											value="/Users/metallica/automated_Installer/OfflineInstallerMacTest" />
+										<property name="targetDirForBuild" value="${basedir}/target" />
+										<property name="artifactName" value="${env.JOB_NAME}-${SVN_REVISION}" />
+										<property name="buildTargetDir" value="${basedir}/target" />
+										<property name="fileFromBuild"
+											value="${basedir}/target/${artifactName}.zip" />
+										<property name="ipTrackerInstaller" value="${tracker.url}" />
+										<property name="client.version" value="${artifact.version}" />
+										<ant antfile="${macOsXAntDir}/build.xml" dir="${macOsXAntDir}">
+											<target name="generateInstallerMacOSX" />
+										</ant>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- PROFILES TO ASSEMBLY A ZIP WITH THE SYSTEM JARS -->
+		<profile>
+			<id>updateWindows</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<configuration>
+							<finalName>ALL_CLIENT_${artifact.version}_WIN</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/main/os/windows/update/distribution.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>updateMac</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<configuration>
+							<finalName>ALL_CLIENT_${artifact.version}_MAC</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/main/os/mac/update/distribution.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>updateLinux</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<configuration>
+							<finalName>ALL_CLIENT_${artifact.version}_LINUX</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/main/os/linux/update/distribution.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- macUpdater -->
+		<profile>
+			<id>macUpdater</id>
+			<properties>
+				<distribution.descriptor>src/main/os/mac/assemble/distribution.xml</distribution.descriptor>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/os/mac/native</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-cli</id>
+								<configuration>
+									<tasks>
+										<echo>Ejecutando Updater tracker: ${tracker.url}</echo>
+										<property name="env.JOB_NAME" value="null" />
+										<property name="SVN_REVISION" value="null" />
+										<property name="client.dist.number" value="${SVN_REVISION}" />
+										<property name="client.build.number" value="${env}" />
+										<property name="macOsXAntDir"
+											value="/Users/metallica/automated_Installer/MacUpdater" />
+										<property name="targetDirForBuild" value="${basedir}/target" />
+										<property name="artifactName" value="${env.JOB_NAME}-${SVN_REVISION}" />
+										<property name="buildTargetDir" value="${basedir}/target" />
+										<property name="fileFromBuild"
+											value="${basedir}/target/${artifactName}.zip" />
+										<property name="ipTrackerUpdater" value="${tracker.url}" />
+										<property name="client.version" value="${artifact.version}" />
+										<ant antfile="${macOsXAntDir}/buildUpdater.xml" dir="${macOsXAntDir}">
+											<target name="generateUpdaterMacOSX" />
+										</ant>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- Mac Distribution Test -->
+		<profile>
+			<id>distMac</id>
+			<properties>
+				<distribution.descriptor>src/main/os/mac/assemble/distribution.xml</distribution.descriptor>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>com.all</groupId>
+					<artifactId>browser-mozilla</artifactId>
+					<version>${snapshot.version}</version>
+				</dependency>
+			</dependencies>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/os/mac/native</directory>
+					</resource>
+					<resource>
+						<directory>src/main/os/mac/mozilla</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-cli</id>
+								<configuration>
+									<tasks>
+										<property name="env.JOB_NAME" value="null" />
+										<property name="SVN_REVISION" value="null" />
+										<property name="client.dist.number" value="${SVN_REVISION}" />
+										<property name="client.build.number" value="${env}" />
+										<property name="macOsXAntDir"
+											value="/Users/metallica/automated_Installer/OfflineMacDistTest" />
+										<property name="targetDirForBuild" value="${basedir}/target" />
+										<property name="artifactName" value="${env.JOB_NAME}-${SVN_REVISION}" />
+										<property name="buildTargetDir" value="${basedir}/target" />
+										<property name="fileFromBuild"
+											value="${basedir}/target/${artifactName}.zip" />
+										<property name="ipTrackerInstaller" value="${tracker.url}" />
+										<property name="client.version" value="${artifact.version}" />
+										<ant antfile="${macOsXAntDir}/build.xml" dir="${macOsXAntDir}">
+											<target name="generateInstallerMacOSX" />
+										</ant>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+			<version>3.2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>platform</artifactId>
+			<version>3.2.7</version>
+		</dependency>
+        <dependency>
+        	<groupId>log4j</groupId>
+        	<artifactId>log4j</artifactId>
+        	<version>1.2.15</version>
+        	<type>jar</type>
+        	<scope>compile</scope>
+        	<exclusions>
+		        <exclusion>
+		            <groupId>javax.jms</groupId>
+		            <artifactId>jms</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>com.sun.jmx</groupId>
+		            <artifactId>jmxri</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>com.sun.jdmk</groupId>
+		            <artifactId>jmxtools</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>javax.mail</groupId>
+    				<artifactId>mail</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>javax.jms</groupId>
+    				<artifactId>jms</artifactId>
+		        </exclusion>
+		    </exclusions>
+        </dependency>
+
+		<!-- ALL.COM DEPENDENCIES -->
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>appControl</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>client-test</artifactId>
+			<version>${snapshot.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>client-test</artifactId>
+			<version>${snapshot.version}</version>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>commons</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>detectdevices</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>hipecotech</artifactId>
+			<version>${snapshot.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all.testing</groupId>
+			<artifactId>mockRunner</artifactId>
+			<version>${snapshot.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>launcher</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>messengine</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>updater</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all.shared</groupId>
+			<artifactId>shared</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all.client.model</groupId>
+			<artifactId>model</artifactId>
+			<version>${snapshot.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all.client.client-commons</groupId>
+			<artifactId>client-commons</artifactId>
+			<version>${snapshot.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>login</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>client-view</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>client-services</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}</directory>
+							<includes>
+								<include>all.log</include>
+								<include>all.properties</include>
+								<include>all.script</include>
+								<include>all.lck</include>
+							</includes>
+						</fileset>
+					</filesets>
+					<failOnError>false</failOnError>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.0.4</version>
+				<configuration>
+					<excludeResources>true</excludeResources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.0</version>
+				<configuration>
+					<repositoryLayout>flat</repositoryLayout>
+					<repoPath>lib</repoPath>
+					<extraJvmArguments>-Xmx1024m -Xms128m -Djava.library.path=../repo
+						-Djna.library.path=../repo</extraJvmArguments>
+					<programs>
+						<program>
+							<mainClass>com.all.client.Client</mainClass>
+							<name>All.com-client</name>
+						</program>
+					</programs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<finalName>${env.JOB_NAME}-${SVN_REVISION}</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>${distribution.descriptor}</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<excludes>
+						<exclude>**/*.dll</exclude>
+						<exclude>**/*.jnilib</exclude>
+						<exclude>xulrunner/**</exclude>
+						<exclude>scripts/**</exclude>
+						<exclude>emoticons/**</exclude>
+						<exclude>images/**</exclude>
+						<exclude>sounds/**</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>build_test_jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>config/**</exclude>
+					<exclude>META-INF/**</exclude>
+				</excludes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/config</directory>
+				<filtering>true</filtering>
+				<targetPath>config</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+</project>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+	<id>bin</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>src/main/os/linux/native</directory>
+			<outputDirectory>/System/Lib</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources/i18n</directory>
+			<outputDirectory>/System/i18n</outputDirectory>
+			<excludes>
+                <exclude>disclaimer.htm</exclude>
+            </excludes>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/os/linux/mozilla</directory>
+			<outputDirectory>/System/mozilla</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources/emoticons</directory>
+			<outputDirectory>/System/emoticons</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources/scripts</directory>
+			<outputDirectory>/System/scripts</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources/images</directory>
+			<outputDirectory>/System/images</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources/sounds</directory>
+			<outputDirectory>/System/sounds</outputDirectory>
+		</fileSet>
+	</fileSets>
+	<files>
+		<file>
+			<source>src/main/os/linux/scripts/AllDotComClient.sh</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+	</files>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>/System/Jar</outputDirectory>
+			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+			<unpack>false</unpack>
+		</dependencySet>
+	</dependencySets>
+</assembly>

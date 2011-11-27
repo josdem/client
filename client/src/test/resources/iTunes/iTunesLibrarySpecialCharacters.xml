@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Application Version</key><string>9.0.1</string>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Music Folder</key><string>file://localhost/Users/user/Music/iTunes/iTunes%20Music/</string>
+	<key>Library Persistent ID</key><string>1263BCB3C4933841</string>
+	<key>Tracks</key>
+	<dict>
+		<key>49</key>
+		<dict>
+			<key>Track ID</key><integer>49</integer>
+			<key>Name</key><string>TestSong1</string>
+			<key>Album</key><string>Hits 
+			Collections 2000</string>
+			<key>Kind</key><string>Archivo de audio MPEG</string>
+			<key>Size</key><integer>80402</integer>
+			<key>Total Time</key><integer>4754</integer>
+			<key>Date Modified</key><date>2009-08-04T15:45:05Z</date>
+			<key>Date Added</key><date>2009-10-12T21:59:22Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>A3CE502712D4C34C</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost:src/test/resources/playlist2/TestSong1.mp3</string>
+			<key>File Folder Count</key><integer>10</integer>
+			<key>Library Folder Count</key><integer>5</integer>
+		</dict>
+		<key>51</key>
+		<dict>
+			<key>Track ID</key><integer>51</integer>
+			<key>Name</key><string>TestSong2</string>
+			<key>Kind</key><string>Archivo de audio MPEG</string>
+			<key>Size</key><integer>87463</integer>
+			<key>Total Time</key><integer>5459</integer>
+			<key>Date Modified</key><date>2009-08-04T15:45:05Z</date>
+			<key>Date Added</key><date>2009-10-12T21:59:22Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>286CA5D7F7020E8B</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost:src/test/resources/playlist2/Test+Song2.mp3</string>
+			<key>File Folder Count</key><integer>10</integer>
+			<key>Library Folder Count</key><integer>5</integer>
+		</dict>
+		<key>53</key>
+		<dict>
+			<key>Track ID</key><integer>53</integer>
+			<key>Name</key><string>TestSong3</string>
+			<key>Kind</key><string>Archivo de audio MPEG</string>
+			<key>Size</key><integer>103763</integer>
+			<key>Total Time</key><integer>6478</integer>
+			<key>Date Modified</key><date>2009-08-04T15:45:05Z</date>
+			<key>Date Added</key><date>2009-10-12T21:59:22Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Persistent ID</key><string>C289C30E3BC90818</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost:src/test/resources/playlist2/TestSong3.mp3</string>
+			<key>File Folder Count</key><integer>10</integer>
+			<key>Library Folder Count</key><integer>5</integer>
+		</dict>
+	</dict>
+	<key>Playlists</key>
+	<array>
+		<dict>
+			<key>Name</key><string>Biblioteca</string>
+			<key>Master</key><true/>
+			<key>Playlist ID</key><integer>61</integer>
+			<key>Playlist Persistent ID</key><string>635A8B8D41D3CE2C</string>
+			<key>Visible</key><false/>
+			<key>All Items</key><true/>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>49</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>51</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>53</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

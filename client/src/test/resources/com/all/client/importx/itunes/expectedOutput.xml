@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="iso-8859-1"?><library>
+<track trackId="49">
+<name>TestSong1</name>
+<album>Hits Collections 2000</album>
+<location>file://localhost:src/test/resources/playlist/TestSong1.mp3</location>
+</track>
+<track trackId="51">
+<name>TestSong2</name>
+<location>file://localhost:src/test/resources/playlist/TestSong2.mp3</location>
+</track>
+<track trackId="53">
+<name>TestSong3</name>
+<location>file://localhost:src/test/resources/playlist/TestSong3.mp3</location>
+</track>
+<track trackId="54" isPodcast="true">
+<name>Episode 6</name>
+<album>F r a n c o f o n</album>
+<location>file://localhost:src/test/resources/Podcasts/Francofon/Episode6.mp3</location>
+</track>
+<track trackId="55" isPodcast="true">
+<name>Episode 3</name>
+<album>Oscar Podcast</album>
+<location>file://localhost:src/test/resources/Podcasts/OscarPodcast/Episode3.mp3</location>
+</track>
+<track trackId="56" isPodcast="true">
+<name>Episode 7</name>
+<album>F r a n c o f o n</album>
+<location>file://localhost:src/test/resources/Podcasts/Francofon/Episode7.mp3</location>
+</track>
+
+
+<playlist playlistId="61" playlistPersistentId="635A8B8D41D3CE2C" isMaster="true">
+<name>Biblioteca</name>
+<track>49</track>
+<track>51</track>
+<track>53</track>
+</playlist>
+<playlist playlistId="127" playlistPersistentId="DD01CF85C9638345" distinguishedKind="4" hasSmart="true">
+<name>Música</name>
+<track>49</track>
+<track>51</track>
+<track>53</track>
+</playlist>
+<playlist playlistId="136" playlistPersistentId="667F42A9C8AAB6A0" distinguishedKind="2" hasSmart="true">
+<name>Películas</name>
+</playlist>
+<playlist playlistId="139" playlistPersistentId="0D7E6D5CF228BF1E" distinguishedKind="3" hasSmart="true">
+<name>Programas de televisión</name>
+</playlist>
+<playlist playlistId="116" playlistPersistentId="E32A4036EA078186" distinguishedKind="10">
+<name>Podcasts</name>
+</playlist>
+<playlist playlistId="151" playlistPersistentId="02D74CD830AD9F0C" distinguishedKind="26">
+<name>Genius</name>
+</playlist>
+<playlist playlistId="97" playlistPersistentId="168402979C123BCE" distinguishedKind="22">
+<name>iTunes DJ</name>
+<track>51</track>
+<track>49</track>
+<track>53</track>
+<track>53</track>
+<track>49</track>
+<track>51</track>
+<track>49</track>
+<track>51</track>
+<track>53</track>
+<track>51</track>
+<track>53</track>
+<track>49</track>
+<track>53</track>
+<track>49</track>
+<track>51</track>
+<track>53</track>
+</playlist>
+<playlist playlistId="154" isFolder="true" playlistPersistentId="FC30F0739E77E6C7">
+<name>Folder</name>
+<track>49</track>
+<track>51</track>
+</playlist>
+<playlist playlistId="165" isFolder="true" parentPersistentId="FC30F0739E77E6C7" playlistPersistentId="4A2B361556401940">
+<name>1DeepFolder</name>
+<track>51</track>
+</playlist>
+<playlist playlistId="169" parentPersistentId="4A2B361556401940" playlistPersistentId="D298C0E1D912C583">
+<name>DeepPlaylist</name>
+<track>51</track>
+</playlist>
+<playlist playlistId="11244" isFolder="true" playlistPersistentId="193340CF423E469D">
+<name>Podcasts</name>
+<track>55</track>
+</playlist>
+<playlist playlistId="11253" parentPersistentId="193340CF423E469D" playlistPersistentId="D598C41E7897A8E9">
+<name>El podcast falso</name>
+<track>55</track>
+</playlist>
+<playlist playlistId="160" parentPersistentId="FC30F0739E77E6C7" playlistPersistentId="54B3F453297F6D86">
+<name>Playlist</name>
+<track>49</track>
+</playlist>
+<playlist playlistId="82" playlistPersistentId="1DD6B6A03504ACA4" hasSmart="true">
+<name>Añadidas recientemente</name>
+<track>49</track>
+<track>51</track>
+<track>53</track>
+</playlist>
+<playlist playlistId="76" playlistPersistentId="978E95BA279D9EAA" hasSmart="true">
+<name>Las 25 más escuchadas</name>
+</playlist>
+<playlist playlistId="73" playlistPersistentId="913794AF32E77A73" hasSmart="true">
+<name>Mis preferidas</name>
+</playlist>
+<playlist playlistId="94" playlistPersistentId="EF895384790FD28E" hasSmart="true">
+<name>Música clásica</name>
+</playlist>
+<playlist playlistId="70" playlistPersistentId="37290A8EACD8CE5A" hasSmart="true">
+<name>Música de los 90</name>
+</playlist>
+<playlist playlistId="79" playlistPersistentId="DDAB0D72B803EE11" hasSmart="true">
+<name>Reproducciones recientes</name>
+</playlist>
+<playlist playlistId="91" playlistPersistentId="8585A2CDC9A2F558" hasSmart="true">
+<name>Vídeos musicales</name>
+</playlist>
+<playlist playlistId="173" playlistPersistentId="84B43DA292F10CD9">
+<name>RootPlaylist</name>
+<track>49</track>
+<track>51</track>
+<track>53</track>
+</playlist>
+<playlist playlistId="11234" playlistPersistentId="87599DDDED41F50A">
+<name>Podcasts</name>
+<track>56</track>
+<track>55</track>
+</playlist>
+</library>
