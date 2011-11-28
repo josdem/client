@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.all.client.client-commons</groupId>
+	<artifactId>client-commons</artifactId>
+	<packaging>jar</packaging>
+	<version>${snapshot.version}</version>
+	<name>client-commons</name>
+
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>com.all.maven</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+        <dependency>
+        	<groupId>log4j</groupId>
+        	<artifactId>log4j</artifactId>
+        	<version>1.2.15</version>
+        	<type>jar</type>
+        	<scope>compile</scope>
+        	<exclusions>
+		        <exclusion>
+		            <groupId>javax.jms</groupId>
+		            <artifactId>jms</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>com.sun.jmx</groupId>
+		            <artifactId>jmxri</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>com.sun.jdmk</groupId>
+		            <artifactId>jmxtools</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>javax.mail</groupId>
+    				<artifactId>mail</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>javax.jms</groupId>
+    				<artifactId>jms</artifactId>
+		        </exclusion>
+		    </exclusions>
+        </dependency>
+
+		<!-- ALL.COM DEPENDENCIES -->
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>appControl</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>messengine</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all.shared</groupId>
+			<artifactId>shared</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>networking</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
