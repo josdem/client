@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.all.reporting" />
+	<context:component-scan base-package="com.all.messengine" />
+	<context:component-scan base-package="com.all.login" />
+	<context:component-scan base-package="com.all.networking" />
+
+	<bean class="com.all.networking.PeerNetworkingService" id="peerNetworkingService" />
+	<bean class="com.all.messengine.impl.DefaultMessEngine" id="messEngine" />
+	<bean class="org.springframework.web.client.RestTemplate" />
+	<bean class="com.all.login.util.PortraitUtil" id="portraitUtil">
+		<property name="appConfig" ref="applicationConfig" />
+	</bean>
+
+	<util:properties id="clientSettings"
+		location="classpath:/config/clientSettings.properties" />
+
+	<bean id="applicationConfig" class="com.all.client.config.ApplicationConfig" />
+
+</beans>

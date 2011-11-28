@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ <!-- disabled for speed
+        http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring
+     	http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd">
+		<ehcache:annotation-driven />
+		<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+	-->
+
+
+
+
+	<bean id="userJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+		<constructor-arg ref="userDatasource" />
+	</bean>
+
+	<bean id="userTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="userSessionFactory"></property>
+	</bean>
+
+	<bean id="userTransactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="userTransactionManager"></property>
+	</bean>
+
+	<bean id="userDatasource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+		<property name="url"
+			value="jdbc:hsqldb:file:#{applicationConfig.databasePrefix}#{configuration.mail};shutdown=true" />
+	</bean>
+
+	<bean id="userHibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="userSessionFactory" />
+	</bean>
+
+	<bean id="userSessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="userDatasource" />
+		<property name="entityInterceptor" ref="syncDaoInterceptor" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.all.client.model.LocalFolder</value>
+				<value>com.all.client.model.LocalPlaylist</value>
+				<value>com.all.client.model.LocalTrack</value>
+				<value>com.all.client.model.TrackFile</value>
+				<value>com.all.client.model.UserPreference</value>
+				<value>com.all.client.model.PlaylistTrack</value>
+				<value>com.all.shared.model.SyncEventEntity</value>
+				<value>com.all.client.model.UltraPeerInfo</value>
+				<value>com.all.client.model.Download</value>
+				<value>com.all.client.model.ViewColumnOptions</value>
+				<value>com.all.client.model.Genre</value>
+				<value>com.all.client.model.BrokenLinkFailedImport</value>
+				<value>com.all.client.model.DrmProtectedFailedImport</value>
+				<value>com.all.client.model.NonSupportedFormatFailedImport</value>
+				<value>com.all.client.model.UnknownFailedImport</value>
+				<value>com.all.shared.model.ContactInfo</value>
+				<value>com.all.client.model.ContactUserFolder</value>
+				<value>com.all.client.model.ContactFolder</value>
+				<value>com.all.client.model.BugPatch</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.show_comments">true</prop>
+
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+
+				<prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+
+				<!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop> -->
+				<!-- <prop key="net.sf.ehcache.configurationResourceName">/spring/user-ehcache.xml</prop> -->
+			</props>
+		</property>
+	</bean>
+
+
+</beans>

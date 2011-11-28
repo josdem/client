@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.all.client.view" />
+	<context:component-scan base-package="com.all.client" />
+	<context:component-scan base-package="com.all.shared.sync" />
+
+
+	<util:properties id="downloaderSettings"
+		location="classpath:/config/downloader.properties" />
+
+	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
+		id="bundle">
+		<property name="basename" value="i18n/messages" />
+	</bean>
+
+	<bean id="playCountCriteria" class="com.all.client.model.PlayCountCriteria">
+		<property name="playCountCriteriaMap">
+			<map>
+				<entry key="0">
+					<bean class="com.all.client.model.PlayCountCriteria">
+						<constructor-arg index="0" value="0" />
+						<constructor-arg index="1" value="70" />
+					</bean>
+				</entry>
+				<entry key="31" value-ref="playCountCriteria60" />
+				<entry key="61" value-ref="playCountCriteria60" />
+				<entry key="121" value-ref="playCountCriteria60" />
+				<entry key="181" value-ref="playCountCriteria70" />
+				<entry key="241" value-ref="playCountCriteria70" />
+				<entry key="301" value-ref="playCountCriteria70" />
+				<entry key="421">
+					<bean class="com.all.client.model.PlayCountCriteria">
+						<constructor-arg index="0" value="10" />
+						<constructor-arg index="1" value="40" />
+					</bean>
+				</entry>
+				<entry key="601">
+					<bean class="com.all.client.model.PlayCountCriteria">
+						<constructor-arg index="0" value="10" />
+						<constructor-arg index="1" value="30" />
+					</bean>
+				</entry>
+				<entry key="901">
+					<bean class="com.all.client.model.PlayCountCriteria">
+						<constructor-arg index="0" value="20" />
+						<constructor-arg index="1" value="15" />
+					</bean>
+				</entry>
+				<entry key="1801">
+					<bean class="com.all.client.model.PlayCountCriteria">
+						<constructor-arg index="0" value="20" />
+						<constructor-arg index="1" value="7.5" />
+					</bean>
+				</entry>
+				<entry key="3601" value-ref="playCountCriteria5" />
+				<entry key="5401" value-ref="playCountCriteria5" />
+			</map>
+		</property>
+	</bean>
+
+	<bean class="com.all.client.model.PlayCountCriteria" id="playCountCriteria60">
+		<constructor-arg index="0" value="10" />
+		<constructor-arg index="1" value="60" />
+	</bean>
+	<bean class="com.all.client.model.PlayCountCriteria" id="playCountCriteria70">
+		<constructor-arg index="0" value="10" />
+		<constructor-arg index="1" value="50" />
+	</bean>
+	<bean class="com.all.client.model.PlayCountCriteria" id="playCountCriteria5">
+		<constructor-arg index="0" value="20" />
+		<constructor-arg index="1" value="5" />
+	</bean>
+
+	<bean id="syncDaoInterceptor" class="com.all.client.sync.SyncDaoInterceptor" />
+
+	<bean id="downloaderConfig" class="com.all.client.config.DownloaderConfigImpl" />
+
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+	<bean class="org.springframework.web.client.RestTemplate" />
+	<util:properties id="clientSettings" location="classpath:/config/clientSettings.properties" />
+
+</beans>
