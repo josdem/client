@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hipecotech" default="jar">
+	<property name="build.dir" value="./build" />
+	<property name="dist.dir" value="./dist" />
+	<property name="jar.name" value="hipecotec.jar" />
+	<target name="init">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+	<target name="clean">
+		<delete dir="${build.dir}" failonerror="false" />
+		<delete dir="${dist.dir}" failonerror="false" />
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="${build.dir}" debug="on">
+		</javac>
+		<copy todir="${build.dir}">
+			<fileset dir="src" includes="**/*.xml,**/*.properties" />
+			<fileset dir="resources"/>
+		</copy>
+	</target>
+	<target name="jar" depends="compile">
+		<jar jarfile="${dist.dir}/${jar.name}">
+			<fileset dir="${build.dir}">
+			</fileset>
+		</jar>
+	</target>
+</project>
